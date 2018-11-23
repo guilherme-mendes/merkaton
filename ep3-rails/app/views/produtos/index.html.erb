@@ -5,11 +5,11 @@
       <%= image_tag produto.image.url%>
       <div class="caption">
         <h3><%= produto.nome %></h3>
-        <p><%= produto.preço %></p>
+        <p><%= number_to_currency(produto.preço, unit: "R$", separator: ",", delimiter: "")%></p>
         <%= link_to 'Mostrar', produto, class: "btn btn-link" %>
         <%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %>
         <%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %>
-        
+
       </div>
     </div> 
     </div>
@@ -19,3 +19,4 @@
 <br>
 
 <%= link_to 'Novo Produto', new_produto_path, class: "btn btn-link" %>
+
