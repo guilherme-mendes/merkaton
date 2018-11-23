@@ -1,32 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Produtos</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Nome</th>
-      <th>Descrição</th>
-      <th>Preço</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @produtos.each do |produto| %>
-      <tr>
-        <td><%= image_tag produto.image.url(:medium) %></td>
-        <td><%= produto.nome %></td>
-        <td><%= produto.descrição %></td>
-        <td><%= produto.preço %></td>
-        <td><%= link_to 'Mostrar', produto, class: "btn btn-link" %></td>
-        <td><%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %></td>
-        <td><%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="row">
+  <% @produtos.each do |produto| %>
+    <div class="col-md-3">
+      <%= image_tag produto.image.url(:medium) %><br>
+      <%= produto.nome %><br>
+      <%= produto.descrição %><br>
+      <%= produto.preço %><br>
+      <%= link_to 'Mostrar', produto, class: "btn btn-link" %><br>
+      <%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %><br>
+      <%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %>
+    </div>
+  <% end %>
+</div>
 
 <br>
 
