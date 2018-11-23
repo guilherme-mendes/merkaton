@@ -1,13 +1,17 @@
 <div class="row">
   <% @produtos.each do |produto| %>
     <div class="col-md-3">
-      <%= image_tag produto.image.url(:medium) %><br>
-      <%= produto.nome %><br>
-      <%= produto.descrição %><br>
-      <%= produto.preço %><br>
-      <%= link_to 'Mostrar', produto, class: "btn btn-link" %><br>
-      <%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %><br>
-      <%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %>
+      <div class="thumbnail">
+      <%= image_tag produto.image.url%>
+      <div class="caption">
+        <h3><%= produto.nome %></h3>
+        <p><%= produto.preço %></p>
+        <%= link_to 'Mostrar', produto, class: "btn btn-link" %>
+        <%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %>
+        <%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %>
+        
+      </div>
+    </div> 
     </div>
   <% end %>
 </div>
