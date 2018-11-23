@@ -18,9 +18,9 @@
         <td><%= produto.nome %></td>
         <td><%= produto.descrição %></td>
         <td><%= produto.preço %></td>
-        <td><%= link_to 'Show', produto %></td>
-        <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-        <td><%= link_to 'Destroy', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', produto, class: "btn btn-link" %></td>
+        <td><%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %></td>
+        <td><%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Produto', new_produto_path %>
+<%= link_to 'Novo Produto', new_produto_path, class: "btn btn-link" %>
