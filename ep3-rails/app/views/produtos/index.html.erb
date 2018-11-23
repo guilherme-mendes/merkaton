@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Imagem</th>
       <th>Nome</th>
       <th>Descrição</th>
       <th>Preço</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @produtos.each do |produto| %>
       <tr>
+        <td><%= image_tag produto.image.url(:medium) %></td>
         <td><%= produto.nome %></td>
         <td><%= produto.descrição %></td>
         <td><%= produto.preço %></td>

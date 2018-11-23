@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_22_214156) do
+ActiveRecord::Schema.define(version: 2018_11_23_165402) do
 
   create_table "produtos", force: :cascade do |t|
     t.string "nome"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(version: 2018_11_22_214156) do
     t.decimal "preço"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end
