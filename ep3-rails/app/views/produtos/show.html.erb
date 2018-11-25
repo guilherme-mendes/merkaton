@@ -1,21 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @produto.image.url(:medium) %>
-
-<p>
-  <strong>Nome:</strong>
-  <%= @produto.nome %>
-</p>
-
-<p>
-  <strong>Descrição:</strong>
-  <%= @produto.descrição %>
-</p>
-
-<p>
-  <strong>Preço:</strong>
-  <%= @produto.preço %>
-</p>
+<div class = "row">
+  <div class="col-md-6">
+  <div class="thumbnail">
+    <%= image_tag @produto.image.url %>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h3><%= @produto.nome %></h3>
+    <p><%= number_to_currency(@produto.preço, unit: "R$", separator: ",", delimiter: "")%></p>
+    <p><%= @produto.descrição %></p>
+  </div>
+</div>
 
 <%= link_to 'Editar', edit_produto_path(@produto), class: "btn btn-link" %> |
 <%= link_to 'Voltar', produtos_path, class: "btn btn-link" %>
