@@ -11,11 +11,16 @@
       <a class="navbar-brand" href="/">MerkatOn</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/pages/sobre">Sobre<span class="sr-only">(current)</span></a></li>
-        <li><a href="/pages/contato">Contato</a></li>
+      <li><%= link_to "Sobre", pages_sobre_path %></li>
+      <li><%= link_to "Contato", pages_contato_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Cadastre-se", new_user_registration_path %></li>
+      <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "Entrar", new_user_session_path %></li>
+      <li><%= link_to "Editar perfil", edit_user_registration_path %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
