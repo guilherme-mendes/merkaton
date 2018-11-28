@@ -13,17 +13,17 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      <li><%= link_to "Sobre", pages_sobre_path %></li>
       <li><%= link_to "Contato", pages_contato_path %></li>
+      <li><%= link_to "Sobre", pages_sobre_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 
       <% if user_signed_in? %>
       <li><%= link_to "Editar perfil", edit_user_registration_path %></li>
       <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>
-      <% else %>
-      <li><%= link_to "Cadastre-se", new_user_registration_path %></li>
+        <% else %>
       <li><%= link_to "Entrar", new_user_session_path %></li>
+      <li><%= link_to "Cadastre-se", new_user_registration_path %></li>
       <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
