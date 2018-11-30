@@ -7,7 +7,11 @@
       <div class="caption">
         <h3><%= produto.nome %></h3>
         <p><%= number_to_currency(produto.preço, unit: "R$", separator: ",", delimiter: "")%></p>
-        <p><%= "Anunciado por #{produto.user.name}" %></p>   
+        <p><%= "Anunciado por #{produto.user.name}" %></p>
+        <% if (user_signed_in?) && (current_user == produto.user) %>
+        <%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %>
+        <%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %>
+        <% end %>
       </div>
     </div> 
     </div>

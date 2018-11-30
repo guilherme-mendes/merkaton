@@ -1,14 +1,18 @@
 class ProdutosController < ApplicationController
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
   #Permissões (devise)
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:vendedor, :new, :create, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
+  
+  def vendedor
+    @produtos = Produto.where(user: current_user).order("created_at DESC")
+  end
+
   # GET /produtos
   # GET /produtos.json
   def index
-    @produtos = Produto.all
+    @produtos = Produto.all.order("created_at DESC")
   end
-
   # GET /produtos/1
   # GET /produtos/1.json
   def show
