@@ -13,5 +13,7 @@
   </div>
 </div>
 
+<% if current_user == @produto.user %>
 <%= link_to 'Editar', edit_produto_path(@produto), class: "btn btn-link" %> |
+<% end %>
 <%= link_to 'Voltar', produtos_path, class: "btn btn-link" %>
