@@ -25,6 +25,8 @@ class ProdutosController < ApplicationController
   # POST /produtos.json
   def create
     @produto = Produto.new(produto_params)
+    #Produto --> user_id
+    @produto.user_id = current_user.id
 
     respond_to do |format|
       if @produto.save
