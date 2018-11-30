@@ -5,6 +5,8 @@ class Produto < ApplicationRecord
   validates :nome, :descrição, :preço, presence: true
   validates :preço, numericality: { greater_than: 0}
   validates_attachment_presence :image
-
+  
+  # Cada produto pertence a um usuario
+  belongs_to :user
 end
   
