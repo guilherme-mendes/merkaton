@@ -6,7 +6,7 @@
       <%= link_to image_tag(produto.image.url), produto %>
       <div class="caption">
         <h3><%= produto.nome %></h3>
-        <p><%= number_to_currency(produto.preço, unit: "R$ ", separator: ",", delimiter: "")%></p>
+        <h4><b><%= number_to_currency(produto.preço, unit: "R$ ", separator: ",", delimiter: "")%></b></h4>
         <p><%= "Anunciado por #{produto.user.name}" %></p>   
       </div>
     </div> 
