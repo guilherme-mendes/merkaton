@@ -3,15 +3,15 @@
   <% @produtos.each do |produto| %>
     <div class="col-md-3">
       <div class="thumbnail">
-      <%= image_tag produto.image.url%>
+      <%= link_to image_tag(produto.image.url), produto %>
       <div class="caption">
         <h3><%= produto.nome %></h3>
         <p><%= number_to_currency(produto.preço, unit: "R$", separator: ",", delimiter: "")%></p>
         <p><%= "Anunciado por #{produto.user.name}" %></p>
-        <%= link_to 'Mostrar', produto, class: "btn btn-link" %>
+        <% if (user_signed_in?) && (current_user == produto.user) %>
         <%= link_to 'Editar', edit_produto_path(produto), class: "btn btn-link" %>
         <%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn btn-link"  %>
-
+        <% end %>
       </div>
     </div> 
     </div>
@@ -21,5 +21,6 @@
 
 <br>
 
+<% if user_signed_in? %>
 <%= link_to 'Novo Produto', new_produto_path, class: "btn btn-link" %>
-
+<% end %>

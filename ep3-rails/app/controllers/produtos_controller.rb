@@ -1,6 +1,8 @@
 class ProdutosController < ApplicationController
   before_action :set_produto, only: [:show, :edit, :update, :destroy]
-
+  #Permissões (devise)
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
   # GET /produtos
   # GET /produtos.json
   def index
@@ -72,5 +74,11 @@ class ProdutosController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def produto_params
       params.require(:produto).permit(:nome, :descrição, :preço, :image)
+    end
+
+    def check_user 
+      if current_user != @produto.user
+        redirect_to root_url, alert: "Sorry, this product belongs to someone else"
+      end
     end
 end
