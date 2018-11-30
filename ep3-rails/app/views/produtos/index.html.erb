@@ -6,7 +6,7 @@
       <%= link_to image_tag(produto.image.url), produto %>
       <div class="caption">
         <h3><%= produto.nome %></h3>
-        <p><%= number_to_currency(produto.preço, unit: "R$", separator: ",", delimiter: "")%></p>
+        <p><%= number_to_currency(produto.preço, unit: "R$ ", separator: ",", delimiter: "")%></p>
         <p><%= "Anunciado por #{produto.user.name}" %></p>   
       </div>
     </div> 
@@ -15,8 +15,10 @@
 </div>
 </div>
 
-<br>
-
 <% if user_signed_in? %>
-<%= link_to 'Novo Produto', new_produto_path, class: "btn btn-link" %>
+<%= link_to 'Novo Produto', new_produto_path, class: "btn btn-success" %>
+
 <% end %>
+
+<br>
+<br>
