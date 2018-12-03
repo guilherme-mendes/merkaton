@@ -5,7 +5,7 @@ class CreatePedidos < ActiveRecord::Migration[5.2]
       t.string :cidade
       t.string :estado
 
-      t.timestamps
+      t.timestamps 
     end
   end
 end

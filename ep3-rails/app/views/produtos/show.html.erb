@@ -8,6 +8,10 @@
     <h3><%= @produto.nome %></h3>
     <p><%= number_to_currency(@produto.preço, unit: "R$", separator: ",", delimiter: "")%></p>
     <p><%= @produto.descrição %></p>
+    <br>
+    <div class="center">
+    <%= link_to "Comprar agora", new_produto_pedido_path(@produto),class: "btn btn-primary"%>
+    </div>
   </div>
 </div>
 

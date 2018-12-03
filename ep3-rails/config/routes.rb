@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  resources :pedidos
+  
   devise_for :users
-  resources :produtos
+  resources :produtos do
+    resources :pedidos
+end
+
   get 'pages/sobre'
   get 'pages/contato'
   get 'vendedor' => "produtos#vendedor"

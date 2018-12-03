@@ -1,6 +1,6 @@
 class PedidosController < ApplicationController
   before_action :set_pedido, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /pedidos
   # GET /pedidos.json
   def index
@@ -15,6 +15,7 @@ class PedidosController < ApplicationController
   # GET /pedidos/new
   def new
     @pedido = Pedido.new
+    @produto = Produto.find(params[:produto_id])
   end
 
   # GET /pedidos/1/edit
@@ -25,10 +26,17 @@ class PedidosController < ApplicationController
   # POST /pedidos.json
   def create
     @pedido = Pedido.new(pedido_params)
+    @produto = Produto.find(params[:produto_id])
+    @vendedor = @produto.user
+
+    #PREENCHE AS COLUNAS DO BANCO COM ID DO USER CONECTADO
+    @pedido.produto_id = @produto.id
+    @pedido.comprador_id = current_user.id
+    @pedido.vendedor_id = @vendedor.id
 
     respond_to do |format|
       if @pedido.save
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully created.' }
+        format.html { redirect_to root_url, notice: 'Pedido was successfully created.' }
         format.json { render :show, status: :created, location: @pedido }
       else
         format.html { render :new }
