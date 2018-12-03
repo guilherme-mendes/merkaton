@@ -3,6 +3,15 @@ class PedidosController < ApplicationController
   before_action :authenticate_user!
   # GET /pedidos
   # GET /pedidos.json
+  
+  def vendas
+    @pedidos = Pedido.all.where(vendedor: current_user).order("created_at DESC")
+  end
+
+  def compras
+    @pedidos = Pedido.all.where(comprador: current_user).order("created_at DESC")
+  end
+  
   def index
     @pedidos = Pedido.all
   end

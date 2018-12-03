@@ -19,6 +19,8 @@
       <ul class="nav navbar-nav navbar-right">
 
       <% if user_signed_in? %>
+      <li><%= link_to "Histórico de Vendas", vendas_path %></li>
+      <li><%= link_to "Histórico de Compras", compras_path %></li>
       <li><%= link_to "Meus produtos", vendedor_path %></li>
       <li><%= link_to "Editar perfil", edit_user_registration_path %></li>
       <li><%= link_to "Sair", destroy_user_session_path, method: :delete %></li>

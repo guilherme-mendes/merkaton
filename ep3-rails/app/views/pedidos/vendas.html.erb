@@ -1,0 +1,28 @@
+<div class="center">
+<h2>Histórico de Vendas</h2>
+</div>
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th class="center">Imagem</th>
+        <th class="center">Item</th>
+        <th class="center">Preço</th>
+        <th class="center">Cliente</th>
+        <th class="center">Data da Venda</th>
+    </tr>
+
+    <% @pedidos.each do |pedido|%>
+        <tr>
+            <td class="center"><%= image_tag pedido.produto.image.url(:thumb) %></td>
+            <td class="center"><%= pedido.produto.nome %></td>
+            <td class="center"><%= number_to_currency(pedido.produto.preço, unit: "R$ ", separator: ",", delimiter: "") %></td>
+            <td class="center"><%= pedido.comprador.name %></td>
+            <td class="center"><%= pedido.created_at.strftime("%0d/%m/%Y") %></td>
+
+        </tr>
+        <%end%>
+</table>
+
+<% if user_signed_in? %>
+<%= link_to 'Novo Produto', new_produto_path, class: "btn btn-success" %>
+<% end %>
