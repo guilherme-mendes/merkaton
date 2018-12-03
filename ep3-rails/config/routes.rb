@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pedidos
   devise_for :users
   resources :produtos
   get 'pages/sobre'
