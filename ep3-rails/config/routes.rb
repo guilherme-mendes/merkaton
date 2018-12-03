@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :produtos do
-    resources :pedidos
+    resources :pedidos, only: [:new, :create]
 end
 
   get 'pages/sobre'
