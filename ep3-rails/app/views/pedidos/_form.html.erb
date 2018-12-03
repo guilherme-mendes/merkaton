@@ -1,0 +1,33 @@
+<%= form_with(model: [@produto, @pedido], local: true) do |form| %>
+  <% if pedido.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dimiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(pedido.errors.count, "error") %> prohibited this pedido from being saved:</h4>
+
+      <ul>
+      <% pedido.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :estado %>
+    <%= form.text_field :estado, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Completar Compra", class: "btn btn-success"%>
+  </div>
+<% end %>

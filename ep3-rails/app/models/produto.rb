@@ -8,5 +8,7 @@ class Produto < ApplicationRecord
   
   # Cada produto pertence a um usuario
   belongs_to :user
+  has_many :pedidos
+  
 end
   
