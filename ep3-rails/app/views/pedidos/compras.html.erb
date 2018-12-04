@@ -18,6 +18,7 @@
             <td class="center"><%= pedido.produto.nome %></td>
             <td class="center"><%= number_to_currency(pedido.produto.preço, unit: "R$ ", separator: ",", delimiter: "") %></td>
             <td class="center"><%= pedido.vendedor.name %></td>
+            
             <td class="center"><%= pedido.created_at.strftime("%0d/%m/%Y") %></td>
 
         </tr>
