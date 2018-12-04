@@ -9,8 +9,11 @@
     <p><%= number_to_currency(@produto.preço, unit: "R$", separator: ",", delimiter: "")%></p>
     <p><%= @produto.descrição %></p>
     <br>
-    <div class="center">
+    <div>
+    <% # Usuário não pode comprar seu próprio produto %>
+    <% if current_user != @produto.user %>
     <%= link_to "Comprar agora", new_produto_pedido_path(@produto),class: "btn btn-primary"%>
+    <% end %>
     </div>
   </div>
 </div>
