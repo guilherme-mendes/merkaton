@@ -1,5 +1,6 @@
 <div class="center">
 <h2>Histórico de Vendas</h2>
+<br>
 </div>
 
 <table class="table table-striped table-bordered">
@@ -23,6 +24,4 @@
         <%end%>
 </table>
 
-<% if user_signed_in? %>
-<%= link_to 'Novo Produto', new_produto_path, class: "btn btn-success" %>
-<% end %>
+<%= link_to 'Voltar', produtos_path, class: "btn btn-link"%>
