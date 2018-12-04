@@ -5,4 +5,5 @@ class Pedido < ApplicationRecord
     #Relacionamento entre dois modelos
     belongs_to :comprador, class_name: "User" , :optional => true
     belongs_to :vendedor, class_name: "User" , :optional => true
+
 end

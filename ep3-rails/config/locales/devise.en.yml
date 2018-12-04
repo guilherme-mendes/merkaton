@@ -7,15 +7,15 @@ en:
       send_instructions: "Voce receberá um email de confirmação para confirmar sua conta."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
     failure:
-      already_authenticated: "Você ja esta logado"
+      already_authenticated: "Você já está logado!"
       inactive: "Sua conta ainda não foi ativada"
-      invalid: "Invalido %{authentication_keys} ou senha."
+      invalid: "Inválido %{authentication_keys} ou senha."
       locked: "Sua conta esta bloqueada"
       last_attempt: "You have one more attempt before your account is locked."
       not_found_in_database: "Invalido %{authentication_keys} ou senha."
       timeout: "Sua sessão expirou"
-      unauthenticated: "Voce precisa entrar ou se cadastrar antes de continuar"
-      unconfirmed: "Voce tem que confirmar seu endereço de email antes de continuar"
+      unauthenticated: "Você precisa entrar ou se cadastrar antes de continuar"
+      unconfirmed: "Você tem que confirmar seu endereço de email antes de continuar"
     mailer:
       confirmation_instructions:
         subject: "Instruções para confirmação"
@@ -45,9 +45,9 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Sua conta foi atualizada com sucesso"
     sessions:
-      signed_in: "Entrou com sucesso"
-      signed_out: "Saiu com sucesso"
-      already_signed_out: "Saiu com sucesso"
+      signed_in: "Entrou com sucesso!"
+      signed_out: "Saiu com sucesso!"
+      already_signed_out: "Saiu com sucesso!"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
@@ -61,4 +61,4 @@ en:
       not_locked: "Não foi bloqueado"
       not_saved:
         one: "1 erro impediu %{resource} de ser salvo:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        other: "%{count} erros impediram a gravação de %{resource} :"
