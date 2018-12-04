@@ -17,6 +17,12 @@
       <li><%= link_to "Sobre", pages_sobre_path %></li>
       </ul>
 
+      <%= form_tag produtos_path, method: :get, class: "navbar-form navbar-right", role: "search" do %>
+          <%= text_field_tag :search, params[:search], class: "form-control" %>
+          <%= submit_tag "Search", name: nil, class: "btn btn-danger" %>
+          <% end %>
+
+
       <ul class="nav navbar-nav navbar-right">
       
       <% if user_signed_in? %>

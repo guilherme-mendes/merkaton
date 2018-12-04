@@ -1,4 +1,4 @@
-<h2>Forgot your password?</h2>
+<h2>Esqueceu sua senha?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
@@ -9,7 +9,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+    <%= f.submit "Mandar instruções para recuperação da senha", class: "btn btn-primary" %>
   </div>
 <% end %>
 
