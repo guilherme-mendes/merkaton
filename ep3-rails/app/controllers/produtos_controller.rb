@@ -11,8 +11,13 @@ class ProdutosController < ApplicationController
   # GET /produtos
   # GET /produtos.json
   def index
+    
     @produtos = Produto.all.order("created_at DESC")
+    
+    @produtos = Produto.where(["nome LIKE ?","%#{params[:search]}%"])
+  
   end
+  
   # GET /produtos/1
   # GET /produtos/1.json
   def show
