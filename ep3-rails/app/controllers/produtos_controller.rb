@@ -89,7 +89,7 @@ class ProdutosController < ApplicationController
     end
 
     def check_user 
-      if current_user.admin == false
+      if current_user.admin == false && current_user != @produto.user
         redirect_to root_url, alert: "Este produto pertence a alguém"
       end
     end
