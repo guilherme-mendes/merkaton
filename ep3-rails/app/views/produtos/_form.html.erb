@@ -2,13 +2,8 @@
   <% if produto.errors.any? %>
     <div id="error_explanation" class="alert alert-danger alert-dismissable">
     <button type="button" class="close" data-dimiss="alert" aria-hidden="true">&times;</button>
-      <h4><%= pluralize(produto.errors.count, "error") %> prohibited this produto from being saved:</h2>
+      <h4>Preencha os dados necessários </h2>
 
-      <ul>
-      <% produto.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
     </div>
   <% end %>
 
