@@ -32,7 +32,7 @@ class PedidosController < ApplicationController
 
     respond_to do |format|
       if @pedido.save
-        format.html { redirect_to root_url, notice: 'Compra realizada com sucesso!' }
+        format.html { redirect_to root_url, notice: 'Pedido foi criado com sucesso' }
         format.json { render :show, status: :created, location: @pedido }
       else
         format.html { render :new }

@@ -1,8 +1,16 @@
 class ProdutosController < ApplicationController
-  before_action :set_produto, only: [:show, :edit, :update, :destroy]
-  #Permissões (devise)
-  before_action :authenticate_user!, only: [:vendedor, :new, :create, :edit, :update, :destroy]
-  before_action :check_user, only: [:edit, :update, :destroy]
+
+    before_action :set_produto, only: [:show, :edit, :update, :destroy]
+    #Permissões (devise)
+    before_action :authenticate_user!, only: [:vendedor, :new, :create, :edit, :update, :destroy]
+
+
+
+  if User.current_user.try(:admin == false)
+
+    before_action :check_user, only: [:edit, :update, :destroy]
+  end
+
   
   def vendedor
     @produtos = Produto.where(user: current_user).order("created_at DESC")

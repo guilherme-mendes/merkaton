@@ -22,3 +22,13 @@
 <%= link_to 'Editar', edit_produto_path(@produto), class: "btn btn-link" %> |
 <% end %>
 <%= link_to 'Voltar', produtos_path, class: "btn btn-link" %>
+
+
+<% if current_user != nil %>
+  <% if current_user.admin == true %>
+  <%= link_to 'Editar', edit_produto_path(@produto), class: "btn btn-link" %> 
+  <% end %>
+
+<% end %>
+
+
