@@ -3,13 +3,8 @@ class ProdutosController < ApplicationController
     before_action :set_produto, only: [:show, :edit, :update, :destroy]
     #Permissões (devise)
     before_action :authenticate_user!, only: [:vendedor, :new, :create, :edit, :update, :destroy]
-
-
-
-  if User.current_user.try(:admin == false)
-
     before_action :check_user, only: [:edit, :update, :destroy]
-  end
+  
 
   
   def vendedor
@@ -94,8 +89,8 @@ class ProdutosController < ApplicationController
     end
 
     def check_user 
-      if current_user != @produto.user
-        redirect_to root_url, alert: "Sorry, this product belongs to someone else"
+      if current_user.admin == false
+        redirect_to root_url, alert: "Este produto pertence a alguém"
       end
     end
 end
