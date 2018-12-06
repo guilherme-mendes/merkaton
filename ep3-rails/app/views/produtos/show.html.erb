@@ -21,12 +21,12 @@
 <% if current_user == @produto.user %>
 <%= link_to 'Editar', edit_produto_path(@produto), class: "btn btn-link" %> |
 <% end %>
-<%= link_to 'Voltar', produtos_path, class: "btn btn-link" %>
+<%= link_to 'Voltar', produtos_path, class: "btn btn-link" %> 
 
 
 <% if current_user != nil %>
   <% if current_user.admin == true %>
-  <%= link_to 'Editar', edit_produto_path(@produto), class: "btn btn-link" %>
+ | <%= link_to 'Editar', edit_produto_path(@produto), class: "btn btn-link" %> |
   <%= link_to 'Excluir', @produto, method: :delete, data: { confirm: 'Tem certeza que deseja excluir esse produto?' }, class: "btn btn-link" %>
 
   <% end %>
