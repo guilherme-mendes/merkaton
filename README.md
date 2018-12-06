@@ -1,4 +1,4 @@
-# MerkatOn 
+# MerkatOn `#f03c15`
 
 ## Plataforma de venda e compra de produtos
 
