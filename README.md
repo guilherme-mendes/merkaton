@@ -56,31 +56,3 @@ Foram usadas as seguintes Gems além das padrões do Rails:
 * Paperclip
 * Bootstrap
 * Railroady
-
-## Screenshots
-
-![Captura_de_tela_de_2018-12-06_17-05-04](/uploads/218172da82eb103f1716b3c7a23e1d18/Captura_de_tela_de_2018-12-06_17-05-04.png)
-
-![Captura_de_tela_de_2018-12-06_17-05-53](/uploads/e7e797906526242b0d8ccaad75d01768/Captura_de_tela_de_2018-12-06_17-05-53.png)
-
-![Captura_de_tela_de_2018-12-06_17-06-02](/uploads/dc33a252ea1e9a2b5c43e4cb47db73b9/Captura_de_tela_de_2018-12-06_17-06-02.png)
-
-![Captura_de_tela_de_2018-12-06_17-13-01](/uploads/56b6cd46fe4e29e92aa582189980ed39/Captura_de_tela_de_2018-12-06_17-13-01.png)
-
-![Captura_de_tela_de_2018-12-06_17-06-14](/uploads/a0c3a0d5436057c744b25e4e30a93e85/Captura_de_tela_de_2018-12-06_17-06-14.png)
-
-![Captura_de_tela_de_2018-12-06_17-06-23](/uploads/52d20ee3068f9752cfe3ce689afd531e/Captura_de_tela_de_2018-12-06_17-06-23.png)
-
-![Captura_de_tela_de_2018-12-06_17-07-03](/uploads/4b0c20d9623c8373135c30514ecdc76b/Captura_de_tela_de_2018-12-06_17-07-03.png)
-
-![Captura_de_tela_de_2018-12-06_17-07-26](/uploads/843039c7703f779c085e08e3c6d14727/Captura_de_tela_de_2018-12-06_17-07-26.png)
-
-![Captura_de_tela_de_2018-12-06_17-08-10](/uploads/7d5f17e684feb9079640455e375e2d04/Captura_de_tela_de_2018-12-06_17-08-10.png)
-
-![Captura_de_tela_de_2018-12-06_17-08-26](/uploads/f20afa70ea3233098d62e59b88d90233/Captura_de_tela_de_2018-12-06_17-08-26.png)
-
-
-
-
-
-
