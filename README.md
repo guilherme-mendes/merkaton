@@ -1,7 +1,5 @@
 # MerkatOn
 
-## Plataforma de venda e compra de produtos
-
 ## Como usar o projeto
 
 Siga as seguintes instruções em seu terminal:
