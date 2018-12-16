@@ -2,10 +2,6 @@
 
 ## Plataforma de venda e compra de produtos
 
-A aplicação web consiste em um mercado online de compra e venda, onde usuários
-podem divulgar seus produtos e serviços diversos após efetuarem o cadastro/login no
-site.
-
 ## Como usar o projeto
 
 Siga as seguintes instruções em seu terminal:
