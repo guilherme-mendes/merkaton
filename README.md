@@ -20,7 +20,7 @@ $ rails db:migrate
 $ rails s
 
 # Abra em seu Web browser o link abaixo
-http://localhost:3000/
+$ http://localhost:3000/
 ```
 
 ## Funcionalidades do projeto
