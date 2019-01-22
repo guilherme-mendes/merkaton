@@ -34,7 +34,8 @@ Imagem, Nome do Vendedor)
 * Cadastro (com todas as informações) de Usuários que tem permissões para
 vender/comprar produtos
 * Criar usuário Admin (alterar/excluir todos os produtos)
-* Possibilidade de comprar produtos de usuários distintos• Anunciar produtos (upload de imagem, nome, descrição, preço)
+* Possibilidade de comprar produtos de usuários distintos
+* Anunciar produtos (upload de imagem, nome, descrição, preço)
 * Gerenciar seus produtos (Editar/Excluir/Visualizar)
 * Comprar produtos inserindo seu endereço
 * Histórico de compras (com informações do vendedor)
